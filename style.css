@@ -1,55 +1,106 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Inter', sans-serif;
 }
 
 body {
     height: 100vh;
-    background-image: linear-gradient(to bottom right, #00aeff, #8300f6);
+    background: linear-gradient(135deg, #00aeff, #8300f6);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
 }
 
-.container {
-    min-height: 75%;
-    min-width: 25%;
-    border-radius: 5%;
-
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
-
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+nav.nav {
+    width: 28%;
+    margin-top: 20px;
     display: flex;
+    align-items: center;
+}
 
-    justify-content: flex-start;
+nav.nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav.nav li {
+    list-style: none;
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+
+#setting_icon img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+#setting_icon img:hover {
+    transform: rotate(20deg) scale(1.1);
+}
+
+.container {
+    min-height: 35%;
+    min-width: 28%;
+    padding: 40px 30px;
+    margin-top: 3%;
+
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.25),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+
+    display: flex;
     flex-direction: column;
-    align-items: center
+    align-items: center;
 }
 
 ul#change_mode {
     list-style: none;
     display: flex;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 10%;
-    font-size: 20px;
+    gap: 25px;
+    margin-top: 0px;
+    font-size: 18px;
 }
 
 ul#change_mode li {
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
+    padding: 14px 28px;
 
-    border-radius: 10%;
-    border: 1px solid rgba(255, 255, 255, 0.002);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    border-radius: 14px;
+    cursor: pointer;
+
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    transition: 0.25s ease;
+}
+
+
+#change_mode li:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
 .time {
-    display: block;
-    margin-top: 50px;
-    font-size: 100px;
+    margin-top: 40px;
+    font-size: 90px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: white;
+    cursor: default;
 }

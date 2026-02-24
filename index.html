@@ -1,27 +1,44 @@
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
     <title>Pomodoro</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <nav class="nav">
-        <ul>
-            <li>Pomodoro</li>
-            <li id='setting_icon'>
-                <a href="">
-                    <img src="assets/setting.png" alt="Setting icon" width="24" height="24">
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <div class='container'>
-        <ul id='change_mode'>
-            <li>Focus Time</li>
-            <li>Short Break</li>
-            <li>Long Break</li>
-        </ul>
-        <time datetime="" class="time">20:00:00</time>
+
+    <div class="wrapper">
+
+        <nav class="nav">
+            <span id="title">Pomodoro</span>
+            <button id="setting_icon" class="glass-btn">
+                <img src="assets/setting.png" alt="Setting icon">
+            </button>
+        </nav>
+
+        <div class="container">
+
+            <div class="change_mode">
+                <button class="glass-btn">Focus Time</button>
+                <button class="glass-btn">Short Break</button>
+                <button class="glass-btn">Long Break</button>
+            </div>
+
+            <time class="time">20:00</time>
+
+            <div class="control">
+                <button id="start" class="glass-btn">Start</button>
+                <button id="reset" class="glass-btn">
+                    <img src="assets/refresh-arrow.png" alt="Reset icon">
+                </button>
+            </div>
+
+        </div>
+
     </div>
+
 </body>
+
+</html>
